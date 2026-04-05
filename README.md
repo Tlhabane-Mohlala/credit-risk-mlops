@@ -1,27 +1,62 @@
 # Credit Risk MLOps
 
-This project demonstrates a credit risk prediction workflow using Python and machine learning.
+End-to-end machine learning project for *credit default prediction* with a focus on *calibrated Probability of Default (PD)* estimation and production-oriented deployment.
 
-## What has been done
-- Data loading and preprocessing
-- Logistic Regression baseline model
-- Random Forest model
-- SMOTE for class imbalance handling
-- Model evaluation using Accuracy, ROC-AUC, Precision, Recall, and F1-score
+## Project Overview
+This project demonstrates how a credit risk model can move beyond notebook experimentation into a more production-ready workflow. The pipeline covers data preparation, model development, class imbalance handling, probability calibration, experiment tracking, API-based inference, and containerized deployment.
+
+## Key Features
+- Credit default prediction using supervised machine learning
+- Class imbalance handling with *SMOTE*
+- *Probability calibration* for more reliable PD estimates
+- Model evaluation using:
+  - Accuracy
+  - ROC-AUC
+  - Precision
+  - Recall
+  - F1-score
+  - *Brier Score*
+- Experiment tracking with *MLflow*
+- Real-time inference using *FastAPI*
+- Containerized deployment with *Docker*
+
+## Why Calibration Matters
+In credit risk, performance is not only about classification accuracy. Lending, pricing, and portfolio decisions depend on *reliable probability estimates. This project therefore emphasizes **calibration*, ensuring that predicted default probabilities are more aligned with real-world outcomes.
 
 ## Tech Stack
 - Python
 - pandas
+- NumPy
 - scikit-learn
 - imbalanced-learn
+- MLflow
+- FastAPI
+- Postman
+- Docker
 - PostgreSQL
-- Git/GitHub
+- Git / GitHub
 
 ## Project Structure
-- `model.py` - model training and evaluation
-- `db_connect.py` - PostgreSQL connection
-- `requirements.txt` - project dependencies
-- `data/` - dataset folder
+- model.py — model training, evaluation, and experiment logic
+- db_connect.py — PostgreSQL connection logic
+- requirements.txt — project dependencies
+- data/ — input dataset(s)
 
-## Goal
-Build an end-to-end credit risk MLOps pipeline with calibration, explainability, deployment, and monitoring.
+## Current Status
+- Model development completed
+- Calibration workflow implemented
+- API deployment tested locally
+- Docker containerization completed
+- GitHub workflow/CI to be finalized
+
+## Project Goal
+To build a production-oriented *credit risk MLOps pipeline* that combines predictive performance, calibration, explainability, and deployment readiness.
+
+## Future Improvements
+- Add CI workflow with GitHub Actions
+- Add model monitoring and logging
+- Deploy API to cloud infrastructure
+- Extend explainability reporting
+
+## Author
+*Matlhomola Mohlala*
