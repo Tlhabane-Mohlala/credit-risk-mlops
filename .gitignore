@@ -1,0 +1,25 @@
+# Python
+venv/
+_pycache_/
+*.pyc
+
+# MLflow
+mlruns/
+mlflow.db
+
+# Models (IMPORTANT 🔥)
+served_model/
+*.pkl
+
+# Environment
+.env
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
