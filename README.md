@@ -58,5 +58,27 @@ To build a production-oriented *credit risk MLOps pipeline* that combines predic
 - Deploy API to cloud infrastructure
 - Extend explainability reporting
 
+  # 1. Clone the repository
+git clone https://github.com/Tlhabane-Mohlala/credit-risk-mlops.git
+
+# 2. Navigate into the project
+cd credit-risk-mlops
+
+# 3. Create a virtual environment
+python -m venv venv
+
+# 4. Activate the environment
+# Windows:
+venv\Scripts\activate
+
+# Mac/Linux:
+source venv/bin/activate
+
+# 5. Install dependencies
+pip install -r requirements.txt
+
+# 6. Run the FastAPI app
+uvicorn api:app --reload
+
 ## Author
 *Matlhomola Mohlala*
