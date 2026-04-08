@@ -21,7 +21,7 @@ This project demonstrates how a credit risk model can move beyond notebook exper
 - Containerized deployment with *Docker*
 
 ## Why Calibration Matters
-In credit risk, performance is not only about classification accuracy. Lending, pricing, and portfolio decisions depend on *reliable probability estimates. This project therefore emphasizes **calibration*, ensuring that predicted default probabilities are more aligned with real-world outcomes.
+In credit risk, performance is not only about classification accuracy. Lending, pricing, and portfolio decisions depend on *reliable probability estimates*. This project therefore emphasizes *calibration*, ensuring that predicted default probabilities are more aligned with real-world outcomes.
 
 ## Tech Stack
 - Python
@@ -37,28 +37,37 @@ In credit risk, performance is not only about classification accuracy. Lending, 
 - Git / GitHub
 
 ## Project Structure
-- model.py — model training, evaluation, and experiment logic
-- db_connect.py — PostgreSQL connection logic
-- requirements.txt — project dependencies
-- data/ — input dataset(s)
+- `model.py` — model training, evaluation, and experiment logic  
+- `db_connect.py` — PostgreSQL connection logic  
+- `save_model.py` — saves trained model artifacts  
+- `api.py` — FastAPI application for inference  
+- `Dockerfile` — containerization setup  
+- `.github/` — CI/CD workflows  
+- `requirements.txt` — project dependencies  
+- `data/` — input dataset(s)  
 
 ## Current Status
-- Model development completed
-- Calibration workflow implemented
-- API deployment tested locally
-- Docker containerization completed
-- GitHub workflow/CI to be finalized
+- Model development completed  
+- Calibration workflow implemented  
+- API deployment tested locally  
+- Docker containerization completed  
+- GitHub workflow/CI to be finalized  
 
 ## Project Goal
 To build a production-oriented *credit risk MLOps pipeline* that combines predictive performance, calibration, explainability, and deployment readiness.
 
 ## Future Improvements
-- Add CI workflow with GitHub Actions
-- Add model monitoring and logging
-- Deploy API to cloud infrastructure
-- Extend explainability reporting
+- Add CI workflow with GitHub Actions  
+- Add model monitoring and logging  
+- Deploy API to cloud infrastructure  
+- Extend explainability reporting  
 
-  # 1. Clone the repository
+---
+
+##  How to Run
+
+```bash
+# 1. Clone the repository
 git clone https://github.com/Tlhabane-Mohlala/credit-risk-mlops.git
 
 # 2. Navigate into the project
@@ -79,6 +88,3 @@ pip install -r requirements.txt
 
 # 6. Run the FastAPI app
 uvicorn api:app --reload
-
-## Author
-*Matlhomola Mohlala*
